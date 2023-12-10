@@ -12,9 +12,8 @@
 #define DVRK    1
 #define NUM     2
 #define SYM     3
-#define FUN     4
-#define MSE     5
-#define QWE     6
+#define MSE     4
+#define QWE     5
 
 
 &mt {
