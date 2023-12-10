@@ -8,44 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT 0
-#define DVRK    1
-#define NUM     2
-#define SYM     3
-#define FUN     4
-#define MSE     5
-#define QWE     6
-
-
-#include "key-common.dtsi"
-
-// mod-tap settings
-&mt {
-   flavor = "tap-preferred";
-   tapping_term_ms = <200>;
-};
-
-// mouse move settings
-#define MMV_U MOVE_VERT(-1200)
-#define MMV_D MOVE_VERT(1200)
-#define MMV_L MOVE_HOR(-1200)
-#define MMV_R MOVE_HOR(1200)
-
-&mmv {    
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent=<1>;
-};
-
-// mouse wheel settings
-#define MWH_U SCROLL_VERT(15)
-#define MWH_D SCROLL_VERT(-15)
-#define MWH_L SCROLL_HOR(-15)
-#define MWH_R SCROLL_HOR(15)
-
-&mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
-};
 
 &mt {
     tapping-term-ms = <200>;
