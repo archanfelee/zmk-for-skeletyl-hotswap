@@ -24,9 +24,6 @@
     quick-release;
 };
 
-
-/ {
-
 // mod-tap settings
 &mt {
    flavor = "tap-preferred";
@@ -54,6 +51,9 @@
         time-to-max-speed-ms = <2000>;
         acceleration-exponent=<0>;
 };
+
+
+/ {
 
 	combos {
         compatible = "zmk,combos";
