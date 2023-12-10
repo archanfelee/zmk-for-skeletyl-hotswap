@@ -29,6 +29,29 @@
     quick-release;
 };
 
+// mouse move settings
+#define MMV_U MOVE_VERT(-1200)
+#define MMV_D MOVE_VERT(1200)
+#define MMV_L MOVE_HOR(-1200)
+#define MMV_R MOVE_HOR(1200)
+
+&mmv {    
+        time-to-max-speed-ms = <500>;
+        acceleration-exponent=<1>;
+};
+
+// mouse wheel settings
+#define MWH_U SCROLL_VERT(15)
+#define MWH_D SCROLL_VERT(-15)
+#define MWH_L SCROLL_HOR(-15)
+#define MWH_R SCROLL_HOR(15)
+
+&mwh {    
+        time-to-max-speed-ms = <2000>;
+        acceleration-exponent=<0>;
+};
+
+
 / {
 	    combos {
         compatible = "zmk,combos";
@@ -110,27 +133,6 @@
         };
     };
 
-// mouse move settings
-#define MMV_U MOVE_VERT(-1200)
-#define MMV_D MOVE_VERT(1200)
-#define MMV_L MOVE_HOR(-1200)
-#define MMV_R MOVE_HOR(1200)
-
-&mmv {    
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent=<1>;
-};
-
-// mouse wheel settings
-#define MWH_U SCROLL_VERT(15)
-#define MWH_D SCROLL_VERT(-15)
-#define MWH_L SCROLL_HOR(-15)
-#define MWH_R SCROLL_HOR(15)
-
-&mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
-};
 
     keymap {
         compatible = "zmk,keymap";
