@@ -29,27 +29,6 @@
     quick-release;
 };
 
-// mouse move settings
-#define MMV_U MOVE_VERT(-1200)
-#define MMV_D MOVE_VERT(1200)
-#define MMV_L MOVE_HOR(-1200)
-#define MMV_R MOVE_HOR(1200)
-
-&mmv {    
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent=<1>;
-};
-
-// mouse wheel settings
-#define MWH_U SCROLL_VERT(15)
-#define MWH_D SCROLL_VERT(-15)
-#define MWH_L SCROLL_HOR(-15)
-#define MWH_R SCROLL_HOR(15)
-
-&mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
-};
 
 
 / {
@@ -170,9 +149,9 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-        &kp C_POWER    &kp LEFT       &mwh MWH_U         &kp RIGHT   &kp C_BRIGHTNESS_INC      &kp BACKSLASH  &kp C_VOICE_COMMAND  &kp HOME   &kp PAGE_UP    &kp TILDE
+        &kp C_POWER    &kp LEFT       &kp G         &kp RIGHT   &kp C_BRIGHTNESS_INC      &kp BACKSLASH  &kp C_VOICE_COMMAND  &kp HOME   &kp PAGE_UP    &kp TILDE
         &kp C_VOL_UP   &kp C_PREVIOUS &kp C_PLAY_PAUSE   &kp C_NEXT  &kp C_MUTE                &kp CARET      &kp AMPS             &kp STAR   &kp LPAR       &kp RPAR
-        &kp C_VOL_DN   &kp AT         &mwh MWH_D         &kp BSPC    &kp C_BRIGHTNESS_DEC      &kp PLUS       &kp SEMICOLON        &kp END    &kp PAGE_DOWN  &kp TILDE2  
+        &kp C_VOL_DN   &kp AT         &kp C         &kp BSPC    &kp C_BRIGHTNESS_DEC      &kp PLUS       &kp SEMICOLON        &kp END    &kp PAGE_DOWN  &kp TILDE2  
                              &lt MSE SPACE  &lt SYM ESC   &trans          &trans  &kp C_PLAY_PAUSE  &kp ESC
             >;
         };
