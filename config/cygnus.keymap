@@ -164,6 +164,7 @@
                 &kp EXCLAMATION  &kp QUESTION  &kp LESS_THAN   &kp GREATER_THAN   &kp GRAVE     &kp UNDERSCORE   &kp COLON  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SINGLE_QUOTE
         &trans          &trans          &trans          &trans  &kp BSPC   &kp K_MENU
             >;
-        };	
+        };
 
+};
 };
