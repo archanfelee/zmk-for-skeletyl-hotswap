@@ -7,16 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-
-
-#define DEFAULT 0
-#define DVRK    1
-#define NUM     2
-#define SYM     3
-#define MSE     4
-#define QWE     5
-
 
 &mt {
     tapping-term-ms = <200>;
@@ -27,29 +17,6 @@
     release-after-ms = <2000>;
     quick-release;
 };
-
-// mouse move settings
-#define MMV_U MOVE_VERT(-1200)
-#define MMV_D MOVE_VERT(1200)
-#define MMV_L MOVE_HOR(-1200)
-#define MMV_R MOVE_HOR(1200)
-
-&mmv {    
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent=<1>;
-};
-
-// mouse wheel settings
-#define MWH_U SCROLL_VERT(15)
-#define MWH_D SCROLL_VERT(-15)
-#define MWH_L SCROLL_HOR(-15)
-#define MWH_R SCROLL_HOR(15)
-
-&mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
-};
-
 
 / {
 	    combos {
@@ -132,11 +99,10 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+default_layer {
             label = "Marx";
 			bindings = <
         &kp Q     &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U      &kp I      &kp O      &kp P
@@ -164,7 +130,41 @@
                 &kp EXCLAMATION  &kp QUESTION  &kp LESS_THAN   &kp GREATER_THAN   &kp GRAVE     &kp UNDERSCORE   &kp COLON  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SINGLE_QUOTE
         &trans          &trans          &trans          &trans  &kp BSPC   &kp K_MENU
             >;
+        };	
+        layer_4 {
+            bindings = <
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+        &trans          &trans          &trans          &trans  &trans  &trans
+            >;
         };
 
-};
+        layer_5 {
+            bindings = <
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+        &trans          &trans          &trans          &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+        &trans          &trans          &trans          &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+        &trans          &trans          &trans          &trans  &trans  &trans
+            >;
+        };
+    };
 };
