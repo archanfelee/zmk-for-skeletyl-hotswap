@@ -17,6 +17,18 @@
 #define MSE     4
 #define QWE     5
 
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+};
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
+
+
+
 // mouse move settings
 #define MMV_U MOVE_VERT(-1200)
 #define MMV_D MOVE_VERT(1200)
@@ -41,15 +53,6 @@
 
 
 
-&mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
-};
-
-&sk {
-    release-after-ms = <2000>;
-    quick-release;
-};
 
 
 
