@@ -55,7 +55,6 @@
             key-positions = <20 21>;
             bindings = <&kp PG_UP>;
         };
-        };
     };
     behaviors {
         hm: homerow_mods {
