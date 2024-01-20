@@ -32,6 +32,7 @@
    tapping_term_ms = <200>;
 };
 
+/
 #define MOVE_VERT(vert) ((vert)&0xFFFF)
 #define MOVE_VERT_DECODE(encoded) (int16_t)((encoded)&0x0000FFFF)
 #define MOVE_HOR(hor) (((hor)&0xFFFF) << 16)
@@ -145,7 +146,7 @@ default_layer {
             label = "MSE";
             bindings = <
                   &none  &none   &mmv MMV_U   &none   &bt BT_CLR          &kp C_BRIGHTNESS_INC  &kp PAGE_UP   &none  &kp PAGE_DOWN    &kp C_POWER
-                  &mkp LCLK  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R   &none                  &kp C_BRIGHTNESS_DEC  &none  &none   &none  &kp K_POWER
+                  &none  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R   &none                  &kp C_BRIGHTNESS_DEC  &none  &none   &none  &kp K_POWER
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp C_BACKLIGHT_TOGGLE  &kp K_APP      &none       &kp K_LOCK       &kp C_SLEEP_MODE
         &trans          &trans          &trans          &trans  &trans  &trans
             >;
