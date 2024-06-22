@@ -28,11 +28,6 @@
     quick-release;
 };
 
-// mod-tap settings
-&mt {
-   flavor = "tap-preferred";
-   tapping_term_ms = <200>;
-};
 
 
 / {
